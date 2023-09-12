@@ -127,12 +127,21 @@ class CommonMethod {
                     AppStrings.no,
                     style: TextStyle(color: AppColors.colorBlack),
                   )),
-              TextButton(
-                  onPressed: () => onPressed?.call(),
-                  child: Text(
-                    AppStrings.yes,
-                    style: TextStyle(color: AppColors.colorBlack),
-                  )),
+              Container(
+                decoration: BoxDecoration(
+                    color: AppColors.colorPrimary,
+                    border: Border.all(
+                      color: AppColors.colorWhite,
+                    ),
+                    borderRadius:
+                    const BorderRadius.all(Radius.circular(10))),
+                child: TextButton(
+                    onPressed: () => onPressed?.call(),
+                    child: Text(
+                      AppStrings.yes,
+                      style: TextStyle(color: AppColors.colorBlack),
+                    )),
+              ),
             ],
           );
         });
